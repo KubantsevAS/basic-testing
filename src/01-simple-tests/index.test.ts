@@ -2,11 +2,11 @@
 import { simpleCalculator, Action } from './index';
 
 const getRandomNumber = () => {
-    const MAX_VALUE = 9;
-    const MIN_VALUE = 1;
+  const MAX_VALUE = 9;
+  const MIN_VALUE = 1;
 
-    return Math.floor(Math.random() * MAX_VALUE) + MIN_VALUE;
-}
+  return Math.floor(Math.random() * MAX_VALUE) + MIN_VALUE;
+};
 
 describe('simpleCalculator tests', () => {
   const firstNumber = getRandomNumber();
@@ -76,7 +76,7 @@ describe('simpleCalculator tests', () => {
     const rawInput = {
       a: firstNumber,
       b: secondNumber,
-      action: 'invalid action'
+      action: 'invalid action',
     };
     const result = simpleCalculator(rawInput);
 
@@ -87,7 +87,7 @@ describe('simpleCalculator tests', () => {
     const rawInput = {
       a: firstNumber,
       b: 'Invalid value',
-      action: Action.Add
+      action: Action.Add,
     };
     const result = simpleCalculator(rawInput);
 
